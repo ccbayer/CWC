@@ -1,0 +1,52 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// calculate em given a px font size
+@mixin font-size($font-size, $line-height: 1, $context: $font-size-base, $adjusted: false) {
+	$factor: 1;
+	@if ($adjusted == true) {
+		$factor: 1.6667;
+	}
+	$line-height: $line-height * $factor;
+	// by default we define font size in ems based on base font size (16px)
+	// but we can override by passing through context font size, which works well for nested elements
+	font-size: strip-unit($font-size * $factor) / strip-unit($context) * 1rem;
+	line-height: $line-height;
+}
+// calculate letter spacing using the 1000 = 1 em photoshop conversion
+@mixin letter-spacing($photoshopLetterSpacing) {
+	// by default we define font size in ems based on base font size (16px)
+	// but we can override by passing through context font size, which works well for nested elements
+	letter-spacing: $photoshopLetterSpacing / 1000 * 1em;
+}
+
+
+@mixin subtitle($color: $gold, $border: true, $bg: $background) {
+		@include uniform;
+		color: $gold;
+		background: rgba($bg, .85);
+		text-transform: uppercase;
+		font-weight: 400;
+		@include font-size(20px, 50px);
+		@include letter-spacing(200);
+		@if($border) {
+			padding: 0 45px 0 45px;
+			border: 2px solid $color;
+		}
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " "; // 1
+		display: table; // 2
+ 	}
+ 	&:after {
+ 		clear: both;
+  	}
+}

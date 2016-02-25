@@ -1,0 +1,66 @@
+form {
+	clear: both;
+	p {
+		color: $blue;
+		padding: 35px 0 50px 0;
+		text-align: center;
+		@include font-size(14px, 26px);
+	}
+	width: 45%;
+	margin: 0 auto;
+	padding: 65px 0;
+	input,
+	select, 
+	textarea {
+		color: $blue;
+		border-width: 0;
+		background: $white;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 10px;
+		@extend %gotham-medium;
+		margin: 0 0 8px 0;
+		padding: 10px;
+		
+	}
+	fieldset {
+		border: none;
+		padding: 0;
+		&.fields-50 {
+			input {
+				width: 48%;
+				display: inline-block;
+				float: left;
+			}
+		}
+		&.fields-100 {
+			input {
+				width: 100%;
+				display: block;
+				&.inline {
+					display: inline-block;
+					width: auto;
+				}
+			}
+			textarea {
+				padding: 40px;
+				text-align: center;
+				min-height: 100px;
+				width: 100%;
+			}
+			select {
+				width: 100%;
+				background: $white;
+				text-align: center;
+				font-size: 14px;
+			}
+		}
+	}
+	label {
+		color: $blue;
+		text-transform: uppercase;
+		display: inline-block;
+		font-size: 10px;
+		@extend %gotham-medium;
+	}
+}

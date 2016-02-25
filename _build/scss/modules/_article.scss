@@ -1,0 +1,66 @@
+
+article {
+	.content-column & {
+		color: $blue;
+		background: rgba($white, .85);
+		padding: 95px 75px;
+		width: 90%;
+		position: relative;
+		h3 {
+			@include font-size(20px);
+			padding-top: 0;
+			font-size: normal;
+		}
+		p {
+			@include font-size(18px);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 50px;
+			left: 75px;
+			width: 85px;
+			height: 3px;
+			background-color: $gold;
+		}
+	}
+	&.main-content {
+		background: transparent;
+		color: $blue;
+		padding: 0;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 840px;
+		text-align: center;
+		aside {
+			@include subtitle($gold, false);
+			display: block;
+			text-align: center;
+			margin: 30px auto;
+		}
+		h2 {
+			@extend %gotham-book;
+			border: none;
+			text-transform: none;
+			@include font-size(28px, 40px);
+			letter-spacing: 0;
+			text-align: center;
+			color: $blue;
+			position: relative;
+			margin-left: 0;
+			&:after {
+				content: '';
+				display: block;
+				margin: 45px auto;				
+				width: 33.333%;
+				height: 7px;
+				background: $gold;
+			}
+		}
+		p {
+			@include font-size(13px, 26px);
+			max-width: 666px;
+			margin: 0 auto 15px auto;
+		}
+	}
+}

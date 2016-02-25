@@ -1,0 +1,42 @@
+.sub-section {
+	clear: both;
+	@include clearfix();
+	h1 {
+		text-align: center;
+		@include font-size(50px, 60px);
+		@include letter-spacing(200);
+		font-family: "Gotham SSm A", "Gotham SSm B";
+		font-weight: 800;
+		-webkit-text-stroke: 4px $blue;
+		color: $white;
+		z-index: 1000;
+		position: relative;
+		.no-text-shadow & {
+			text-shadow:
+			3px 3px 0 $blue,
+			-1px -1px 0 $blue,  
+			1px -1px 0 $blue,
+			-1px  1px 0 $blue,
+			1px  1px 0 $blue;
+		}
+	}
+	h2 {
+		@include subtitle;
+		display: inline-block;
+		margin-left: 50px;	
+	}
+	.sub-section-heading-image {
+		margin: 0 auto;
+		display: block;
+	}
+	.sub-section-pull-up {
+		margin-top: -30px;
+	}
+}
+
+
+h2.list-label {
+	@include subtitle;
+	display: inline-block;
+	margin-left: 50px;	
+}

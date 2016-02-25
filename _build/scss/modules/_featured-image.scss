@@ -1,0 +1,22 @@
+.featured-image {
+	margin: 55px auto;
+	text-align: center;
+	position: relative;
+	z-index: 150;
+	img {
+		&.featured-image-featured {
+			background: $white;
+			border: 3px solid $gold;
+			padding: 30px;			
+			position: relative;
+			z-index: 150;
+			display: inline-block;
+		}
+		&.featured-image-rotator {
+			position: absolute;
+			bottom: -50px;
+			right: 70px;
+			z-index: 50;
+		}
+	}
+}

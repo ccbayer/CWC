@@ -1,0 +1,37 @@
+html, body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Gotham SSm A", "Gotham SSm B";
+	background:  $background;
+	color: $white;
+}
+
+a {
+	color: $gold;
+	text-decoration: none;
+	transition: .25s color ease-out; 
+	&:hover {
+		color: darken($gold, 15%);
+	}
+}
+
+
+
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.container-body  {
+	background: $background;
+}

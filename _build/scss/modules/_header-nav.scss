@@ -1,0 +1,40 @@
+
+/* HEADER & NAV */
+header {
+	position: fixed;
+	top: 0;
+	right: 15%;
+	padding-top: 155px;
+	z-index: 1000000;
+	nav {
+		ul {
+			li {
+				@include uniform('bold', true);
+				display: block;
+				text-transform: uppercase;
+				text-align: left;
+				padding-right: 30px;
+				a {
+					@include font-size(12px, 24px);
+					@include letter-spacing(200);
+				}
+			}
+		}
+	}
+}
+
+.social-media {
+	top: 220px;
+	left: 3%;
+	position: fixed;
+	li {
+		list-style-type: none;
+		transform: rotate(-90deg);
+		transform-origin: left top 0;
+		padding-bottom: 100px;
+		a {
+			@include uniform('bold', false);
+			@include font-size(11px, 24px);
+		}
+	}
+}

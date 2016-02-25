@@ -1,0 +1,14 @@
+footer {
+	background: $white;
+	width: 100%;
+	padding: 40px 0;
+	color: #e0d9ca;
+	@include uniform('regular');
+	@include font-size(10px);
+	@include letter-spacing(200);
+	text-transform: uppercase;
+	text-align: center;
+	a {
+		color: #e0d9ca;
+	}
+}

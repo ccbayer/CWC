@@ -1,0 +1,18 @@
+.floating-img {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: auto;
+	&.floating-img-top-right {
+		top: 0;
+		right: 0;
+	}
+	&.floating-img-fixed-left {
+		left: -50px;
+	}
+}
+
+.column-content-floating-image {
+	width: 100%;
+	margin-right: -30px;
+}

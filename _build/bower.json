@@ -1,0 +1,15 @@
+{
+  "name": "2016",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "bLazy": "blazy#~1.5.2",
+    "waypoints": "~4.0.0",
+    "skrollr": "~0.6.30"
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
+}

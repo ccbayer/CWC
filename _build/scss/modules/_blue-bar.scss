@@ -1,0 +1,13 @@
+.blue-bar {
+	position: absolute;
+	background: $blue;
+	width: 3px;
+	height: 60%;
+	&.blue-bar-left {
+		left: 0;
+	}
+	&.blue-bar-left {
+		right: 0;
+	}
+	
+}

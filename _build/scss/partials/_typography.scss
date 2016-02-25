@@ -1,0 +1,113 @@
+%gotham-light {
+	font-family: "Gotham SSm A", "Gotham SSm B";
+	font-style: normal;
+	font-weight: 300;
+}
+
+%gotham-book {
+	font-family: "Gotham SSm A", "Gotham SSm B";
+	font-style: normal;
+	font-weight: 400;
+}
+
+%gotham-medium {
+	font-family: "Gotham SSm A", "Gotham SSm B";
+	font-style: normal;
+	font-weight: 500;
+}
+
+%gotham-bold {
+	font-family: "Gotham SSm A", "Gotham SSm B";
+	font-style: normal;
+	font-weight: 700;
+}
+
+h1 {
+	text-transform: uppercase;
+	@extend %gotham-light;
+	@include font-size(60px, 60px);
+}
+
+p {
+	@extend %gotham-book;
+}
+
+
+blockquote {
+	color: $gold;
+	@extend %gotham-light;
+	text-transform: uppercase;
+	@include font-size(30px, 35px);
+	@include letter-spacing(200);
+	text-align: center;
+	quotes: "\201C" "\201D" "\2018" "\2019";
+	position: relative;
+	&:before,
+	&:after {
+		position: absolute;
+	}
+	&:before {
+		left: -10px;
+		top: 8px;
+		content: open-quote;
+		color: #e0d9ca;
+		@include font-size(50px, 30px);
+	}
+	&:after {
+		bottom: -8px;
+		right: 10px;
+		content: close-quote;
+		@include font-size(50px, 30px);
+		color: #e0d9ca;
+	}
+}
+
+
+
+// UNIFORM CONDENSED REGULAR
+@font-face {
+  font-family: 'Uniform Condensed';
+  src: url('fonts/Uniform/303442_2_0.eot?') format('eot'), url('fonts/Uniform/303442_2_0.woff') format('woff'), url('fonts/Uniform/303442_2_0.ttf') format('truetype');
+}
+
+
+// UNIFORM BOLD
+@font-face {
+  font-family: 'Uniform Bold';
+  src: url('fonts/Uniform/303442_0_0.eot?') format('eot'), url('fonts/Uniform/303442_0_0.woff') format('woff'), url('fonts/Uniform/303442_0_0.ttf') format('truetype');
+}
+
+// UNIFORM CONDENSED BOLD
+@import url("//hello.myfonts.net/count/2ef3a6");
+
+@font-face {
+	font-family: 'Uniform Condensed Bold';
+	src: url('fonts/Uniform/2EF3A6_0_0.eot'); 
+	src: url('fonts/Uniform/2EF3A6_0_0.eot?#iefix') format('embedded-opentype'), url('fonts/Uniform/2EF3A6_0_0.woff2') format('woff2'),url('fonts/Uniform/2EF3A6_0_0.woff') format('woff'),url('fonts/Uniform/2EF3A6_0_0.ttf') format('truetype');}
+
+// CONDENSED MEDIUM
+@import url("//hello.myfonts.net/count/2ef776");
+
+@font-face {
+	font-family: 'Uniform Condensed Medium';
+	src: url('fonts/Uniform//2EF776_0_0.eot');
+	src: url('/fonts/2EF776_0_0.eot?#iefix') format('embedded-opentype'), url('fonts/Uniform/2EF776_0_0.woff2') format('woff2'), url('fonts/Uniform/2EF776_0_0.woff') format('woff'), 	url('fonts/Uniform/2EF776_0_0.ttf') format('truetype');}
+
+
+@mixin uniform($weight: "Medium", $condensed: true) {
+	$thiswidth: "" !default;
+	@if($condensed) {
+		$thiswidth: "Condensed";
+	}
+	
+	@if($weight == "bold") {
+		$weight: "Bold";	
+	}
+	@if($weight == "medium") {
+		$weight: 'Medium';
+	}
+	
+	font-family: 'Uniform #{$thiswidth} #{$weight}', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}

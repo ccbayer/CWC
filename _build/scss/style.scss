@@ -1,0 +1,28 @@
+/*!
+Theme Name: CWC 2016 - Commonwealth Cure
+Theme URI: http://commonwealthcure.com
+Author: Colin Bayer
+Author URI: http://colinbayer.com
+Description: Custom CWC Theme 
+*/
+
+@import 'partials/variables';
+@import 'partials/utilities';
+@import 'partials/mixins';
+
+@import 'partials/typography';
+@import 'partials/grid';
+
+@import 'partials/page';
+@import 'partials/layout';
+@import 'partials/forms';
+@import 'partials/footer';
+
+@import 'modules/logos';
+@import 'modules/subsection';
+@import 'modules/header-nav';
+@import 'modules/article';
+@import 'modules/floating-image';
+@import 'modules/blue-bar';
+@import 'modules/featured-image';
+@import 'modules/blockwrapper';

@@ -1,0 +1,1 @@
+<blockquote><?php echo $col['quote']; ?></blockquote>

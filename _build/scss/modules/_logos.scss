@@ -1,0 +1,24 @@
+
+.logo {
+	width: 100%;
+	height: auto;
+	max-width: 407px;
+}
+
+.triangle-logo {
+	width: 208px;
+	height: 202px;
+	margin: 35px auto;
+	background-image: url('images/triangle-logo-sprite.png');
+	background-repeat: no-repeat;
+	&.-white {
+		background-position: 0 -198px;
+	}
+	&.fixed {
+		top: 35px;
+		margin: 0px auto;
+		left: 50%;
+		margin-left: -104px;
+	}
+	
+}

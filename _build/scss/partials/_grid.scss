@@ -1,0 +1,13 @@
+
+$content-width: ($grid-count * $grid-width) + (($grid-count - 1) * $gutter-width);
+
+// custom grid
+.container {
+	max-width: $container-width;
+	margin: 0 auto;
+}
+
+.grid-container {
+	width: $content-width;
+	margin: 0 auto;
+}
